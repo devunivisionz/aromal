@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>VCReport</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/fontawesome-free/css/all.min.css')); ?>">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')); ?>">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/icheck-bootstrap/icheck-bootstrap.min.css')); ?>">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/jqvmap/jqvmap.min.css')); ?>">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/assets/css/adminlte.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/toastr/toastr.min.css')); ?>">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')); ?>">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/daterangepicker/daterangepicker.css')); ?>">
+  <!-- summernote -->
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/summernote/summernote-bs4.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('adminpanel/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')); ?>">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+     
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+     <!-- Right navbar links -->
+     <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-user"></i>  <?php echo e(Auth::user()->name); ?>
+
+         
+        </a>
+         
+            <!-- Message Start -->
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <?php echo e(__('Logout')); ?>
+
+                                    </a>
+
+                                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                                        <?php echo csrf_field(); ?>
+                                    </form>
+                                </div>
+            
+            
+            <!-- Message End -->
+          </a>
+          
+         
+      </li>
+        
+        
+        
+                                   
+                    
+        
+            </ul>
+   
+  </nav><?php /**PATH /var/www/vhosts/db-preprod.com360degree.com/httpdocs/resources/views/common/header.blade.php ENDPATH**/ ?>
